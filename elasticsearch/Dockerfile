@@ -27,5 +27,8 @@ WORKDIR $ES_HOME
 
 COPY start /start
 COPY log4j2.properties $ES_HOME/config/
+COPY java.policy /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/
+
+RUN bin/elasticsearch-plugin install discovery-ec2
 
 CMD ["/start"]
