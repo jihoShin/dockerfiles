@@ -1,5 +1,8 @@
 grant{
 	permission javax.management.MBeanTrustPermission "register";
-        permission java.lang.RuntimePermission "accessDeclaredMembers";
-        permission java.lang.RuntimePermission "getClassLoader";
+    permission java.lang.RuntimePermission "accessDeclaredMembers";
+    permission java.lang.RuntimePermission "getClassLoader";
+    
+    permission java.lang.RuntimePermission "loadLibrary.sunec";
+    permission javax.management.MBeanServerPermission "createMBeanServer";
 };
