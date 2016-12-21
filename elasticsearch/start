@@ -51,6 +51,10 @@ setup_clustering() {
   if [ -n "$MIN_MASTERS" ]; then
     OPTS="$OPTS -E discovery.zen.minimum_master_nodes=$MIN_MASTERS"
   fi
+  
+  if [ -n "$MAX_LOCAL_STORAGE_NODES" ]; then
+    OPTS="$OPTS -E node.max_local_storage_nodes=$MAX_LOCAL_STORAGE_NODES"
+  fi
 
 }
 
